@@ -39,26 +39,81 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 */
 
 
-function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+// function getLength(arr, cb) {
+//   // getLength passes the length of the array into the callback.
+// }
+
+const getLength = (arr, cb) => {
+  cb(arr.length);
+};
+getLength(items, length => {
+  console.log(`The length of the array is ${length}.`);
+});
+
+
+
+// function last(arr, cb) {
+//   // last passes the last item of the array into the callback.
+// }
+
+const last = (arr, cb) => {
+  cb(arr.length -1);
+}
+last(items, length => {
+  console.log(`The last item of the array is ${length}.`);
+});
+
+
+
+// function sumNums(x, y, cb) {
+//   // sumNums adds two numbers (x, y) and passes the result to the callback.
+// }
+
+const sumNums = (x, y, cb) => {
+  return cb(x,y)
 }
 
-function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+const add = (x, y) =>{
+  return x + y;
+}
+console.log(sumNums(5,6, add));
+
+
+
+// function multiplyNums(x, y, cb) {
+//   // multiplyNums multiplies two numbers and passes the result to the callback.
+// }
+const sumNums = (x, y, cb) => {
+  return cb(x,y)
 }
 
-function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
+const multiply = (x, y) =>{
+  return x * y;
 }
+console.log(sumNums(5,6, multiply));
 
-function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-}
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
+
+const contains = (arr, str, cb) => {
+  const isInArray = () => {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === str) {
+        return true;
+      }
+    } return false;
+  };
+  cb(isInArray());
+};
+contains(items, 'scissors', result => {
+  console.log(result ? 'scissors is in the array' : 'scissors are not in the array');
+});
+
+
 
 /* STRETCH PROBLEM */
 
