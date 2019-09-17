@@ -110,7 +110,7 @@ const contains = (arr, str, cb) => {
   cb(isInArray());
 };
 contains(items, 'scissors', result => {
-  console.log(result ? 'scissors is in the array' : 'scissors is not in the array');
+  console.log(result ? 'scissors is in the array' : 'scissors are not in the array');
 });
 
 
