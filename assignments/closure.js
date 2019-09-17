@@ -31,7 +31,7 @@ const counterMaker = () => {
 // myCounter(); // 1
 // myCounter(); // 2
 
-// ==== Challenge 3: Make `counterMaker` more sophisticated ====
+// ==== Challenge 3  : Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
 
